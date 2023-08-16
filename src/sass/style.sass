@@ -8,17 +8,14 @@
 @import 'blocks/main'
 @import 'blocks/footer'
 
-
-
-
-body 
+body
     margin: 0
     display: flex
     flex-direction: column
-    // background: $dark-color
-    // font-family: $lato
-    // color: $main-color
-    font-size: 16px
+    background: $dark-color
+    font-family: $arsenal
+    color: $main-color
+    font-size: 18px
     width: 100%
     height: 100%
     margin: 0
@@ -26,23 +23,19 @@ body
     min-height: 100vh
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
-    &.locked 
+    &.locked
         overflow: hidden
-    @include sm 
+    @include sm
         font-size: 16px
-    
 
-
-* 
+*
     box-sizing: border-box
     margin: 0
 
-
-html 
+html
     scroll-behavior: smooth
 
-
-header 
+header
     padding: 0
 
 button
@@ -50,12 +43,12 @@ button
     background-color: transparent
     border: none
 
-h1, h2, h3, h4 
+h1, h2, h3, h4
     margin: 0
     font-weight: normal
 
 img
-    width: auto 
+    width: auto
     max-width: 100%
     height: auto
 
@@ -76,38 +69,39 @@ li
 
 a
     text-decoration: none
-    
-.container 
-    max-width: 1110px
+
+.container
+    max-width: 1240px
     margin: 0 auto
     padding: 0 20px
-    @media(max-width: 576px) 
-        padding: 0 16px
+    @media(max-width: 576px)
+        padding: 0 15px
 
-   
 .section-title
-    // font-family: $haus
-    font-size: 75px
-    line-height: 120%
+    font-family: $arina
+    font-size: 90px
+    line-height: 100%
+    &_wide
+        max-width: 688px
+    &_bright
+        color: $bright-color
     // @include md
     //     font-size: 75px
     //     line-height: 110%
-    // @include sm
-    //     font-size: 60px
+    @include sm
+        font-size: 80px
     // @include xs
     //     font-size: 45px
-    // @include xxs
-    //     font-size: 28px
-    
+    @include xxs
+        font-size: 38px
 
-
-
-
-
-
-
-
-
-
-
-
+.main-text
+    font-size: 18px
+    line-height: 160%
+    &_wide
+        max-width: 380px
+    &_mb
+        &:not(:last-child)
+            margin-bottom: 25px
+    &_dark
+        color: $dark-color

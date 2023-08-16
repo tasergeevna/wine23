@@ -1,0 +1,81 @@
+.preview
+    height: 480px
+    &__bg
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.promo
+    margin-top: -90px
+    &__wrap
+        display: flex
+        align-items: stretch
+        justify-content: flex-end
+    &__info
+        margin-right: 30px
+        flex: 0 0 380px
+    &__img
+        flex: 0 1 482px
+        img
+            height: 100%
+            object-fit: cover
+
+.features
+    &__wrap
+        padding-left: 100px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 132px
+    &__item
+        &_reverse
+            padding-top: 60px
+    &__name
+        position: relative
+        max-width: 278px
+        text-align: center
+        margin-left: -100px
+        margin-top: -40px
+        font-family: $arina
+        font-size: 70px
+        line-height: 100%
+        &_bottom
+            margin-top: 0px
+            margin-bottom: -37px
+        &__img
+            width: 100%
+            object-fit: cover
+
+.tradition
+    background: $main-color
+    padding-bottom: 342px
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &__left
+        padding-left: calc((100% - 1200px)/2)
+        position: relative
+    &__bottom
+        position: absolute
+        left: 0
+        bottom: -120px
+        transform: translateY(100%)
+        width: 100%
+        height: 540px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.country
+    padding-top: 510px
+    &__wrap
+        display: flex
+
+.mb-120
+    margin-bottom: 120px
+
+.pb-200
+    padding-bottom: 200px
+
+.pt-200
+    padding-top: 200px
