@@ -7,6 +7,12 @@
 
 .promo
     margin-top: -90px
+    @include sm
+        margin-top: -68px
+    @include xxs
+        margin-top: -40px
+    @include mini
+        margin-top: -34px
     &__wrap
         display: flex
         align-items: stretch
@@ -15,6 +21,8 @@
             flex-direction: column
             max-width: 444px
             margin-left: auto
+        @include xxs
+            max-width: 100%
     &__info
         margin-right: 30px
         flex: 0 0 380px
@@ -28,6 +36,13 @@
         img
             height: 100%
             object-fit: cover
+        @include sm
+            height: 576px
+            flex: 0 1 auto
+            img
+                width: 100%
+        @include xxs
+            height: 360px
 
 .features
     &__wrap
@@ -37,9 +52,40 @@
         gap: 132px
         @include md
             gap: 104px
+        @include sm
+            padding-left: 70px
+            padding-right: 70px
+            grid-template-columns: 1fr
+            gap: 100px
+        @include xxs
+            padding-left: 90px
+            padding-right: 90px
+            gap: 70px
+        @include mini
+            padding-left: 40px
+            padding-right: 40px
+            align-items: center
     &__item
+        @include sm
+            width: 400px
+        @include xs
+            width: 278px
+        @include mini
+            width: 210px
+            margin-left: auto
+            margin-right: auto
+        @include xxs
+            width: 100%
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
         &_reverse
             padding-top: 60px
+            @include sm
+                padding-top: 0px
+                margin-left: auto
+            @include xxs
+                flex-direction: column
     &__name
         position: relative
         max-width: 278px
@@ -49,20 +95,46 @@
         font-family: $arina
         font-size: 70px
         line-height: 100%
+        @include sm
+            margin-left: -70px
+        @include xxs
+            margin-left: 0
+            margin-top: 0
+            margin-bottom: -23px
+            font-size: 44px
+        @include mini
+            font-size: 32px
+            margin-bottom: -16px
         &_bottom
             margin-top: 0px
             margin-bottom: -37px
-        &__img
+            @include xxs
+                margin-bottom: -23px
+            @include mini
+                margin-bottom: -16px
+    &__img
+        img
             width: 100%
             object-fit: cover
+            min-height: 418px
+        @include xxs
+            width: 100%
+            min-height: 318px
 
 .tradition
     background: $main-color
     padding-bottom: 342px
+    @include sm
+        padding-bottom: 614px
+    @include xxs
+        padding-bottom: 140px
     &__wrap
         display: flex
         justify-content: space-between
         align-items: flex-start
+        @include sm
+            flex-direction: column
+            position: relative
     &__left
         margin-right: 132px
         padding-left: calc((100% - 1200px)/2)
@@ -72,15 +144,38 @@
         @include md
             padding-left: 20px
             margin-right: 70px
+        @include sm
+            position: initial
+            width: 100%
+            padding-right: 20px
         @include xxs
             padding-left: 15px
+            padding-right: 15px
     &__left-content
         width: 688px
         @include md
             width: 628px
+        @include sm
+            width: 100%
     &__right
         @media(min-width: 1920px)
             margin-right: calc((100% - 1900px) / 2)
+            img
+                min-height: 500px
+                object-fit: cover
+        @include sm
+            width: 464px
+            margin-left: auto
+            img
+                width: 100%
+        @include xxs
+            margin-right: auto
+            width: calc(100% - 30px)
+    &__info
+        @include sm
+            margin-block: 100px
+        @include xxs
+            margin-block: 70px
     &__text
         margin-left: auto
     &__bottom
@@ -97,33 +192,63 @@
             width: 100%
             height: 100%
             object-fit: cover
+        @include sm
+            height: 514px
+        @include xxs
+            display: none
 
 .country
     padding-top: 510px
     @media(min-width: 1920px)
         padding-top: 610px
+    @include sm
+        padding-top: 200px
     &__title
         position: relative
     &__wrap
         display: flex
+        @include sm
+            flex-direction: column
     &__left
         margin-right: 30px
         display: flex
         flex-direction: column
         flex: 0 0 688px
         @include md
-            width: 628px
+            flex: 0 0 628px
+        @include sm
+            flex: 0 1 auto
+            margin-right: 0
+            margin-bottom: 100px
+        @include xxs
+            margin-bottom: 70px
     &__right
         align-self: flex-end
         padding-top: 360px
+        @include sm
+            padding-top: 0
     &__img
         width: 55%
         margin-left: auto
         margin-top: -200px
+        img
+            width: 100%
+            min-height: 480px
+            object-fit: cover
+        @include sm
+            margin-top: -19%
+            width: 74%
+            margin-right: auto
+        @include xxs
+            width: 100%
+            min-height: 300px
 
 .story
     background: $main-color
 
 .swiper-slide
+    height: auto
     img
         width: 100%
+        height: 100%
+        object-fit: cover

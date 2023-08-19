@@ -84,16 +84,17 @@ a
     line-height: 100%
     &_wide
         max-width: 688px
+        @include xs
+            max-width: 100%
     &_bright
         color: $bright-color
-    // @include md
-    //     font-size: 75px
-    //     line-height: 110%
+
     @include sm
         font-size: 80px
-    // @include xs
-    //     font-size: 45px
+
     @include xxs
+        font-size: 48px
+    @include mini
         font-size: 38px
 
 .main-text
@@ -103,6 +104,10 @@ a
         font-size: 17px
     &_wide
         max-width: 380px
+        @include sm
+            max-width: 100%
+        @include xxs
+            max-width: 100%
     &_mb
         &:not(:last-child)
             margin-bottom: 25px
@@ -123,6 +128,10 @@ a
 
 .pb-200
     padding-bottom: 200px
+    @include xxs
+        padding-bottom: 140px
 
 .pt-200
     padding-top: 200px
+    @include xxs
+        padding-top: 140px
